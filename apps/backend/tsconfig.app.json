@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
+    "composite": false,
+    "emitDeclarationOnly": false,
+    "outDir": "../../dist/apps/backend",
+    "rootDir": "src",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "target": "ES2022",
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}
+

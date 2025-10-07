@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["node","@nx/react/typings/cssmodule.d.ts","@nx/react/typings/image.d.ts","vite/client"]
+  },
+  "include": ["src/**/*.ts","src/**/*.tsx","src/**/*.js","src/**/*.jsx"],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}

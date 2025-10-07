@@ -1,0 +1,28 @@
+{
+  "name": "frontend",
+  "root": "apps/frontend",
+  "sourceRoot": "apps/frontend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/apps/frontend",
+        "tsConfig": "apps/frontend/tsconfig.app.json",
+        "index": "apps/frontend/index.html"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "frontend:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/frontend/**/*.ts","apps/frontend/**/*.tsx","apps/frontend/**/*.js","apps/frontend/**/*.jsx"]
+      }
+    }
+  }
+}
