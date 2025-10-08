@@ -11,7 +11,8 @@
         "commands": [
        "tsc -p apps/backend/tsconfig.app.json",
        "node apps/backend/scripts/flatten.js",
-        "echo '{ \"type\": \"module\" }' > dist/apps/backend/package.json"
+        "mkdir -p dist/apps/backend",
+      "echo '{ \"type\": \"module\" }' > dist/apps/backend/package.json"
   ]
       }
     },
