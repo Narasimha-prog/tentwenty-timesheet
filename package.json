@@ -2,7 +2,10 @@
   "name": "@tentwenty-timesheet/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "vercel-build:backend": "nx build backend",
+    "vercel-build:frontend": "nx build frontend"
+  },
   "private": true,
   "devDependencies": {
     "@eslint/js": "^9.8.0",
