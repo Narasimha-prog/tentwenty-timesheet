@@ -9,11 +9,10 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "commands": [
-       "tsc -p apps/backend/tsconfig.app.json",
-       "node apps/backend/scripts/flatten.js",
-        "mkdir -p dist/apps/backend",
-      "echo '{ \"type\": \"module\" }' > dist/apps/backend/package.json"
-  ]
+      "tsc -p apps/backend/tsconfig.app.json",
+      "node apps/backend/scripts/flatten.js",
+      "mkdir -p dist/apps/backend && echo '{ \"type\": \"module\" }' > dist/apps/backend/package.json"
+    ]
       }
     },
     "serve": {
