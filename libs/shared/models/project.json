@@ -1,0 +1,23 @@
+{
+  "name": "shared-models",
+  "root": "libs/shared/models",
+  "sourceRoot": "libs/shared/models/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "outputPath": "dist/libs/shared/models",
+        "tsConfig": "libs/shared/models/tsconfig.lib.json",
+           "main": "libs/shared/models/src/index.ts",
+        "buildLibsFromSource": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/models/**/*.ts"]
+      }
+    }
+  }
+}

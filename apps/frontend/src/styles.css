@@ -1,3 +1,6 @@
+/* Import Inter font */
+@import "@fontsource/inter/index.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

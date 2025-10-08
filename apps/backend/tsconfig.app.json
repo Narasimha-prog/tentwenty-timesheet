@@ -1,18 +1,19 @@
 {
+  "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "declaration": false,
     "declarationMap": false,
     "composite": false,
     "emitDeclarationOnly": false,
     "outDir": "../../dist/apps/backend",
-    "rootDir": "src",
+    "rootDir": "../../",
     "module": "Node16",
     "moduleResolution": "Node16",
     "target": "ES2022",
     "esModuleInterop": true,
     "types": ["node"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "../../libs/shared/models/src/**/*.ts"],
   "exclude": ["dist", "node_modules"]
 }
 

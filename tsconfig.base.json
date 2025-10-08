@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+  "@tentwenty-timesheet/shared/models": ["libs/shared/models/src/index.ts"]
+}
+
+,
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
@@ -17,5 +23,7 @@
     "strict": true,
     "target": "es2022",
     "customConditions": ["@tentwenty-timesheet/source"]
-  }
+  },
+  
+
 }

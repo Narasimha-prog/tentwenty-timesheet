@@ -3,11 +3,9 @@
   "compileOnSave": false,
   "files": [],
   "references": [
-    {
-      "path": "./apps"
-    },
-    {
-      "path": "./backend"
-    }
-  ]
+  { "path": "./apps/frontend" },
+  { "path": "./apps/backend" },
+  { "path": "./libs/shared/models" }
+]
+
 }
