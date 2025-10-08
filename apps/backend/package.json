@@ -2,6 +2,7 @@
   "name": "@tentwenty-timesheet/backend",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
   "build:backend": "nx build backend && mv dist/apps/backend/src/* dist/apps/backend/ && rm -r dist/apps/backend/src",
   "serve:backend": "node dist/apps/backend/main.js"
@@ -18,9 +19,7 @@
         "options": {
           "platform": "node",
           "outputPath": "backend/dist",
-          "format": [
-            "cjs"
-          ],
+          "format": ["esm"], 
           "bundle": false,
           "main": "backend/src/main.ts",
           "tsConfig": "backend/tsconfig.app.json",

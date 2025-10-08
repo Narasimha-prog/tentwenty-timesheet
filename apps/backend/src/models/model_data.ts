@@ -1,4 +1,4 @@
-import { Entry, Timesheet, TimesheetStatus, User } from "./model_type";
+import { Entry, Timesheet, TimesheetStatus, User } from "./model_type.js";
 
  export let users: User[] = [
   { id: 1, email: "john@example.com", name: "John Doe", password: "1234" },

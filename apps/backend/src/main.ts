@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { entries, timesheets, users } from './models/model_data';
+import { entries, timesheets, users } from './models/model_data.js';
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
