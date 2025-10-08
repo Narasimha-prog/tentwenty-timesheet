@@ -8,8 +8,8 @@ export function App() {
   return (
     <div className='w-full min-h-screen'>
       <Routes>
-        <Route path="/login" element={<Login setUser={() => {}} />} />
-        <Route path="/" element={<div>Home Page - Protected Content</div>} />
+        <Route path="/" element={<Login setUser={() => {}} />} />
+        <Route path="*" element={<div className='flex justify-center items-center h-screen'> go to  home page please....  <a href='/' className='text-green-600'>Home</a> </div>} />
         <Route path="/table-view" element={<TableView/>} />
       </Routes>
     </div>
