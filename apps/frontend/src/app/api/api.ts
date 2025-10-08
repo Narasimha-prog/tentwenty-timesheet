@@ -10,8 +10,9 @@ export interface Timesheet {
   weekId: number;
   startDate: string;
   endDate: string;
-  status: string;
+  status: "submitted" | "draft" | "approved" | "rejected"; // can restrict status values
 }
+
 
 export interface Entry {
   id: number;
@@ -28,7 +29,7 @@ export const login = (data: { email: string; password: string }) =>
   API.post<{ success: boolean; token: string; user: User }>("/login", data);
 
 export const fetchTimesheets = () =>
-  API.get<Timesheet[]>("/timesheets");
+  API.get<Timesheet[]>("/api/timesheets");
 
 export const fetchEntries = (weekId: string | number) =>
   API.get<Entry[]>(`/timesheets/${weekId}/entries`);
