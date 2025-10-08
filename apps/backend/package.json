@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-  "vercel-build": "nx build backend"
+  "build:backend": "nx build backend && mv dist/apps/backend/src/* dist/apps/backend/ && rm -r dist/apps/backend/src",
+  "serve:backend": "node dist/apps/backend/main.js"
 }
 ,
   "nx": {

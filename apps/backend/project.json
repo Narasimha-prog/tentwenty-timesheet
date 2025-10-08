@@ -5,19 +5,20 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "nx:run-commands",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/backend",
-        "main": "apps/backend/src/main.ts",
-        "tsConfig": "apps/backend/tsconfig.app.json"
+        "commands": [
+       "tsc -p apps/backend/tsconfig.app.json",
+       "node apps/backend/scripts/flatten.js"
+  ]
       }
     },
     "serve": {
       "executor": "nx:run-commands",
       "dependsOn": ["build"],
       "options": {
-        "command": "node dist/apps/backend/src/main.js"
+        "command": " node dist/apps/backend/main.js"
       }
     },
     "lint": {
