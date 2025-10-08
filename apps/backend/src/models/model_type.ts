@@ -4,12 +4,16 @@
   name: string;
   password: string;
 }
-
+export enum TimesheetStatus {
+  Completed = "completed",
+  Incomplete = "incomplete",
+  Missing = "missing",
+}
 export interface Timesheet {
   weekId: number;
   startDate: string;
   endDate: string;
-  status: "submitted" | "draft" | "approved" | "rejected"; // can restrict status values
+  status: TimesheetStatus; // can restrict status values
 }
 
  export interface Entry {

@@ -5,12 +5,16 @@ export interface User {
   email: string;
   name: string;
 }
-
+export enum TimesheetStatus {
+  Completed = "completed",
+  Incomplete = "incomplete",
+  Missing = "missing",
+}
 export interface Timesheet {
   weekId: number;
   startDate: string;
   endDate: string;
-  status: "submitted" | "draft" | "approved" | "rejected"; // can restrict status values
+  status: TimesheetStatus; // can restrict status values
 }
 
 
@@ -29,7 +33,7 @@ export const login = (data: { email: string; password: string }) =>
   API.post<{ success: boolean; token: string; user: User }>("/login", data);
 
 export const fetchTimesheets = () =>
-  API.get<Timesheet[]>("/api/timesheets");
+  API.get<Timesheet[]>("/timesheets");
 
 export const fetchEntries = (weekId: string | number) =>
   API.get<Entry[]>(`/timesheets/${weekId}/entries`);

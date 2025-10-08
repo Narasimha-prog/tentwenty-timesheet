@@ -2,6 +2,10 @@
   "name": "@tentwenty-timesheet/backend",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+  "vercel-build": "nx build backend"
+}
+,
   "nx": {
     "targets": {
       "build": {
