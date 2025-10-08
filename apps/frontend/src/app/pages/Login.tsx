@@ -18,7 +18,7 @@ export default function Login({ setUser }: Props) {
       const res = await login({ email, password });
       localStorage.setItem("token", res.data.token);
       setUser(res.data.user);
-      navigate("/");
+      navigate("/table-view");
     } catch {
       setError("Invalid credentials");
     }
@@ -69,7 +69,11 @@ export default function Login({ setUser }: Props) {
     
     {/* Description */}
     <div className="text-lg font-normal leading-relaxed font-inter">
-      Introducing ticktock, our cutting-edge timesheet web application designed to revolutionize how you manage employee work hours. With ticktock, you can effortlessly track and monitor employee attendance and productivity from anywhere, anytime, using any internet-connected device.
+      Introducing ticktock, our cutting-edge timesheet web application
+       designed to revolutionize how you manage employee work hours
+       . With ticktock, you can effortlessly track and monitor 
+       employee attendance and productivity from anywhere, anytime, 
+       using any internet-connected device.
     </div>
 
   </div>
